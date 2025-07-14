@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY . .
 
-# 🔧 Fix permission for gradlew to avoid "Permission denied" error on Render
+# Fix permission for gradlew to avoid "Permission denied"
 RUN chmod +x ./gradlew
 
 # Build project without running tests
@@ -13,4 +13,5 @@ RUN ./gradlew build -x test
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "build/libs/Backend-0.0.1-SNAPSHOT.jar"]
+# Avoid hardcoded JAR name
+CMD ["sh", "-c", "java -jar build/libs/*.jar"]
