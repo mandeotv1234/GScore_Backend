@@ -22,4 +22,4 @@ databaseChangeLog:
             tableName: users
             columns:
               - column: { name: user_name, value: admin }
-              - column: { name: password, value: f9d0f731bd3c1a6317e29b0c6502f800eb6cb96c6312e5c771ec26506c6fd70f }
+              - column: { name: password, value: $2a$12$OpjmlJSMXp3J9mCzuwZOtuO1gnxi7T7C0R9PQ6AeNZ2CejwYYyybO }
